@@ -1,0 +1,248 @@
+opencollection: 1.0.0
+info:
+  name: Coupon Service
+config:
+  proxy:
+    inherit: true
+    config:
+      protocol: http
+      hostname: ''
+      port: ''
+      auth:
+        username: ''
+        password: ''
+      bypassProxy: ''
+items:
+  - info:
+      name: Redeem Code Japan Geolocation For 'WIOSNA'
+      type: http
+      seq: 1
+    http:
+      method: POST
+      url: http://localhost:8080/api/v1/redemptions
+      headers:
+        - name: X-Forwarded-For
+          value: 34.84.123.12
+      body:
+        type: json
+        data: |-
+          {
+            "code":"WiOsNa",
+            "userId":"user-40"
+          }
+    settings:
+      encodeUrl: true
+      timeout: 0
+      followRedirects: true
+      maxRedirects: 5
+      forwardAuthorizationHeader: true
+    docs: This request retrieves a list of users from the JSONPlaceholder API.
+  - info:
+      name: Redeem Code Poland Geolocation For 'WIOSNA'
+      type: http
+      seq: 3
+    http:
+      method: POST
+      url: http://localhost:8080/api/v1/redemptions
+      headers:
+        - name: X-Forwarded-For
+          value: 5.184.0.1
+      body:
+        type: json
+        data: |-
+          {
+            "code":"WiOsNa",
+            "userId":"user-40"
+          }
+    settings:
+      encodeUrl: true
+      timeout: 0
+      followRedirects: true
+      maxRedirects: 5
+      forwardAuthorizationHeader: true
+    docs: This request retrieves a list of users from the JSONPlaceholder API.
+  - info:
+      name: Create Coupon 'WIOSNA' Max Use 1 For Poland
+      type: http
+      seq: 6
+    http:
+      method: POST
+      url: http://localhost:8080/api/v1/coupons
+      body:
+        type: json
+        data: |-
+          {
+            "code":"wiosna",
+            "maxUses":1,
+            "country":"PL"
+          }
+      auth: inherit
+    settings:
+      encodeUrl: true
+      timeout: 0
+      followRedirects: true
+      maxRedirects: 5
+      forwardAuthorizationHeader: false
+  - info:
+      name: Redeem Code No Geolocation For 'WIOSNA'
+      type: http
+      seq: 5
+    http:
+      method: POST
+      url: http://localhost:8080/api/v1/redemptions
+      body:
+        type: json
+        data: |-
+          {
+            "code":"WiOsNa",
+            "userId":"user-40"
+          }
+    settings:
+      encodeUrl: true
+      timeout: 0
+      followRedirects: true
+      maxRedirects: 5
+      forwardAuthorizationHeader: true
+    docs: This request retrieves a list of users from the JSONPlaceholder API.
+  - info:
+      name: Check 'WIOSNA' Coupon Status
+      type: http
+      seq: 9
+    http:
+      method: GET
+      url: http://localhost:8080/api/v1/coupons/wiosna
+      auth: inherit
+    settings:
+      encodeUrl: true
+      timeout: 0
+      followRedirects: true
+      maxRedirects: 5
+      forwardAuthorizationHeader: false
+  - info:
+      name: Create Coupon 'WIOSNA1' Max Use 3 For Poland
+      type: http
+      seq: 7
+    http:
+      method: POST
+      url: http://localhost:8080/api/v1/coupons
+      body:
+        type: json
+        data: |-
+          {
+            "code":"wiosna1",
+            "maxUses":3,
+            "country":"PL"
+          }
+      auth: inherit
+    settings:
+      encodeUrl: true
+      timeout: 0
+      followRedirects: true
+      maxRedirects: 5
+      forwardAuthorizationHeader: false
+  - info:
+      name: Check 'WIOSNA1' Coupon Status
+      type: http
+      seq: 10
+    http:
+      method: GET
+      url: http://localhost:8080/api/v1/coupons/wiosna1
+      auth: inherit
+    settings:
+      encodeUrl: true
+      timeout: 0
+      followRedirects: true
+      maxRedirects: 5
+      forwardAuthorizationHeader: false
+  - info:
+      name: Create Coupon 'WIOSNA2' Max Use 1 For Japan
+      type: http
+      seq: 8
+    http:
+      method: POST
+      url: http://localhost:8080/api/v1/coupons
+      body:
+        type: json
+        data: |-
+          {
+            "code":"wiosna2",
+            "maxUses":1,
+            "country":"JP"
+          }
+      auth: inherit
+    settings:
+      encodeUrl: true
+      timeout: 0
+      followRedirects: true
+      maxRedirects: 5
+      forwardAuthorizationHeader: false
+  - info:
+      name: Check 'WIOSNA2' Coupon Status
+      type: http
+      seq: 11
+    http:
+      method: GET
+      url: http://localhost:8080/api/v1/coupons/wiosna2
+      auth: inherit
+    settings:
+      encodeUrl: true
+      timeout: 0
+      followRedirects: true
+      maxRedirects: 5
+      forwardAuthorizationHeader: false
+  - info:
+      name: Redeem Code Japan Geolocation For 'WIOSNA2'
+      type: http
+      seq: 2
+    http:
+      method: POST
+      url: http://localhost:8080/api/v1/redemptions
+      headers:
+        - name: X-Forwarded-For
+          value: 34.84.123.12
+      body:
+        type: json
+        data: |-
+          {
+            "code":"WiOsNa2",
+            "userId":"user-40"
+          }
+    settings:
+      encodeUrl: true
+      timeout: 0
+      followRedirects: true
+      maxRedirects: 5
+      forwardAuthorizationHeader: true
+    docs: This request retrieves a list of users from the JSONPlaceholder API.
+  - info:
+      name: Redeem Code Poland Geolocation For 'WIOSNA2'
+      type: http
+      seq: 4
+    http:
+      method: POST
+      url: http://localhost:8080/api/v1/redemptions
+      headers:
+        - name: X-Forwarded-For
+          value: 5.184.0.1
+      body:
+        type: json
+        data: |-
+          {
+            "code":"WiOsNa2",
+            "userId":"user-40"
+          }
+    settings:
+      encodeUrl: true
+      timeout: 0
+      followRedirects: true
+      maxRedirects: 5
+      forwardAuthorizationHeader: true
+    docs: This request retrieves a list of users from the JSONPlaceholder API.
+bundled: true
+extensions:
+  bruno:
+    ignore:
+      - node_modules
+      - .git
+    exportedAt: '2026-11-17T04:04:22.048Z'
+    exportedUsing: Bruno

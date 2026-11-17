@@ -1,0 +1,11 @@
+package com.empik.coupons.exception;
+
+public enum ErrorCode {
+    INVALID_INPUT,
+    COUPON_NOT_FOUND,
+    COUPON_ALREADY_EXISTS,
+    COUPON_EXHAUSTED,
+    COUPON_ALREADY_REDEEMED,
+    COUNTRY_NOT_ALLOWED,
+    GEOLOCATION_UNAVAILABLE
+}
